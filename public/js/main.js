@@ -56,12 +56,33 @@ console.log(etDoonc);
 
 // Exo 8
 let cap = (hey) => {
-    return hey.charAt(0).toUpperCase() + hey.slice(1)
+    return hey.charAt(0).toUpperCase() + hey.slice(1).toLowerCase() 
 }
-let dascap = cap ("salut")
+let dascap = cap("salUt")
 console.log(dascap);
 
 // Exo 9
-let calcul = (nbr1 , operator , nbr2) => {
+let chi = prompt('Un nombre?')
+let op = prompt('* - + /')
+let chi2 = prompt('Un autre nombre?')
+let calcul = (a,b,c) => {
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    switch (b) {
+        case '-':
+            return a-c
+        case '*':
+            return a*c
+        case '/':
+            return a/c
+        case '+':
+            return a+c
+            break;
     
+        default:
+            return alert('No bueno')
+            break;
+    }
 }
+console.log(calcul(chi,op,chi2));
